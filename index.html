@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全屏切换</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			height:100%;
+			overflow: hidden;
+		}
+		#container,.sections,.section{
+			height:100%;
+			position: relative;
+		}
+		.section{
+			background-position: 50% 50%;
+			background-color: #000;
+			background-size: cover;
+		}
+		#section0{
+			background-image: url(images/1.jpg);
+			color: #fff;
+			text-shadow:1px 1px 1px #333;
+		}
+		#section1{
+			color: #fff;
+			text-shadow:1px 1px 1px #333;
+			background-image: url(images/2.jpg);
+		}
+		#section2{
+			background-image: url(images/3.jpg);
+			color: #fff;
+			text-shadow:1px 1px 1px #666;
+		}
+		#section3{
+			color: #008283;
+			background-image: url(images/4.jpg);
+			text-shadow:1px 1px 1px #fff;
+		}
+		#section0 p{
+			color: #F1FF00;
+		}
+		#section3 p{
+			color: #00A3AF;
+		}
+		.left{
+			float: left;
+		}
+
+		h1{
+			font-size: 6em;
+			font-weight: normal;
+		}
+		p{
+			font-size: 2em;
+			margin:0.5em 0 2em 0;
+		}
+		.intro{
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			text-align: center;
+		}
+		.pages{
+			position:fixed;
+			list-style: none;
+		}
+		.vertical.pages{
+			right: 10px;
+			top: 50%;
+		}
+		.horizontal.pages{
+			left: 50%;
+			bottom: 10px;
+		}
+		.pages li{
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #fff;
+			margin: 10px 5px;
+			cursor: pointer;
+		}
+		.horizontal.pages li{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.pages li.active{
+			width: 14px;
+			height: 14px;
+			border: 2px solid #FFFE00;
+			background: none;
+			margin-left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="container" data-PageSwitch>
+		<div class="sections">
+			<div class="section" id="section0">
+				<div class="intro">
+					<h1 class="title">switchPage</h1>
+					<p>Create Beautiful Fullscreen Scrolling Websites</p>
+				</div>
+			</div>
+			<div class="section" id="section1">
+				<div class="intro">
+					<h1 class="title">Example</h1>
+					<p>Create Beautiful Fullscreen Scrolling Websites</p>
+				</div>
+			</div>
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1 class="title">Example</h1>
+					<p>Create Beautiful Fullscreen Scrolling Websites</p>
+				</div>
+			</div>
+			<div class="section" id="section3">
+				<div class="intro">
+					<h1 class="title">The end</h1>
+					<p>Create Beautiful Fullscreen Scrolling Websites</p>
+				</div>
+			</div>
+		</div
+	</div>
+	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+	<!-- <script type="text/javascript" src="pageswitch.js"></script> -->
+	<script type="text/javascript" src="pageswitch.js"></script>
+	<!-- <script type="text/javascript">
+		//改变默认参数，初始化PageSwitch插件
+		$("#container").PageSwitch({
+			direction:"horizontal"
+		});
+	</script> -->
+</body>
+</html>
